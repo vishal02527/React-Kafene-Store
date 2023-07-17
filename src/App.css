@@ -1,38 +1,352 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;}
+
+.navbar {
+    width: 100%;
+    padding: 0 48px;
+    box-sizing: border-box;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px #ccc;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 150px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.LeftMenu {
+    display: flex;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.LogoWrapper {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.LogoWrapper img {
+    width: 24px;
+    height: 28px;
+    margin-right: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.BrandName {
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    margin: 0;
+    color: rgba(0, 0, 0, 0.8);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.MenuItem {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+
+    padding: 24px 0 16px;
+
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    margin: 0 10px;
 }
+
+.MenuItem.active {
+    color: #20B883;
+    border-bottom: 3px solid #20B883;
+}
+
+
+/* login page starts */
+.LoginForm {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 6px;
+    background-color: white;
+    margin: 8% auto;
+
+    padding: 32px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 0 6px #ccc;
+}
+
+.LoginForm h1 {
+    position: relative;
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.InputField {
+    width: 100%;
+    padding-top: 16px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 0;
+    border-bottom: 2px solid #8c8c8c;
+    margin-bottom: 16px;
+    outline: none;
+}
+
+.Button {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    background-color: #20B883;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    margin-top: 24px;
+}
+/* login page ends */
+
+
+/* Home Page starts */
+.PageWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8% 4%;
+    margin-top: 100px;
+}
+
+.MainHeading {
+    margin: 0;
+}
+
+.OrdersWrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 0;
+}
+
+.FilterWrapper {
+    width: 180px;
+}
+
+.FilterWrapper h3 {
+    margin: 0;
+}
+
+.FilterOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.FilterCheckbox {
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.FilterCheckbox input {
+    margin-right: 12px;
+}
+
+.OrderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.OrderTable th, .OrderTable td {
+    text-align: left;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.TableRow td {
+    background-color: #fff;
+    border-bottom: 4px solid #F6F7FB;
+}
+
+.PrimaryText {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.SecondaryText {
+    color: #8c8c8c;
+}
+
+/* Home Page ends */
+
+
+/* User page starts */
+.PageWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8% 4%;
+}
+
+.MainHeading {
+    margin: 0;
+}
+
+.OrdersWrapper {
+    width: 100%;
+    padding: 24px 0;
+}
+
+.FilterWrapper {
+    width: 700px;
+    /* display: flex; */
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+.FilterWrapper h3 {
+    margin: 0;
+}
+
+.FilterOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.FilterCheckbox {
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.FilterCheckbox input {
+    margin-right: 12px;
+}
+
+.OrderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.OrderTable th, .OrderTable td {
+    text-align: left;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.TableRow td {
+    background-color: #fff;
+    border-bottom: 4px solid #F6F7FB;
+}
+
+.PrimaryText {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.SecondaryText {
+    color: #8c8c8c;
+}
+
+.SearchBox {
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 15px;
+    border: 0;
+    border-bottom: 2px solid #8c8c8c;
+    margin: 0;
+    margin-right: 36px;
+    outline: none;
+}
+
+.UserSearchbox {
+    width: 700px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+}
+/* user Page end */
+
+
+/* product page starts  */
+.PageWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 8% 4%;
+}
+
+.MainHeading {
+    margin: 0;
+}
+
+.OrdersWrapper {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 0;
+}
+.count{
+    margin: 10px 0;
+}
+.FilterWrapper {
+    width: 180px;
+}
+
+.FilterWrapper h3 {
+    margin: 0;
+}
+
+.FilterOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+.FilterCheckbox {
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.FilterCheckbox input {
+    margin-right: 12px;
+}
+
+.OrderTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.OrderTable th, .OrderTable td {
+    text-align: left;
+    padding: 12px 24px;
+    font-size: 14px;
+}
+
+.TableRow td {
+    background-color: #fff;
+    border-bottom: 4px solid #F6F7FB;
+}
+
+.TableRow.ExpiredRow td {
+    /* background-color: #F6F7FB; */
+}
+
+.PrimaryText {
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: 500;
+}
+
+.SecondaryText {
+    color: #8c8c8c;
+}
+/* product page ends */
