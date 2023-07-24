@@ -26,7 +26,6 @@ export default class Login extends Component {
       } else {
         alert("enter valid credential");
       }
-      console.log(this.state);
     };
     return (
       <div>

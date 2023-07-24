@@ -68,7 +68,7 @@ export default class Users extends Component {
               <tbody id="User-data">
                 {this.state.UsersList?.length > 0  && this.state.UsersList.map((user)=>{
                   return(
-                  <tr class="TableRow">
+                  <tr className="TableRow">
             <td className="SecondaryText">{user.id}</td>
             <td className="PrimaryText">
                 <img
