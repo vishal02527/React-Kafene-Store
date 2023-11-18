@@ -21,10 +21,10 @@ export default class Login extends Component {
       ) {
         localStorage.setItem("userName", JSON.stringify(this.state.userName));
 
-        alert("login");
+        alert("Logged in successfully!");
         window.location.replace("/orders");
       } else {
-        alert("enter valid credential");
+        alert("Please enter valid credential");
       }
     };
     return (
